@@ -1,0 +1,226 @@
+/*--SECTION FEATURE--*/
+
+.section-feature, .section-services, .section-testimonial, .section-footer {
+    width: 100%;
+    padding: 100px 0;
+}
+
+.section-feature{
+    color:black;
+}
+.feature-box{
+    @include respond(tab-land){
+        margin: 0 20px;
+       }
+}
+.feature-img{
+
+    text-align:center;
+
+    &__photo{
+        width:70%;
+        border-radius: 10%;
+
+        @include respond(tab-land){
+            margin-top: 120px;
+           }
+        @include respond(tab-port){
+            margin-top: 20px;
+            width:100%;
+        }   
+        @include respond(phone){
+            margin-top: 0px;
+            width:100%;
+           }
+    }
+}
+.feature-desc{
+
+    &__icon {
+      width: 50px;
+      height: 50px;
+      float:left;
+      font-size: 3rem;
+      line-height: 50px;
+      text-align: center;
+      border-radius: 8px;
+      color:$primary;
+      border:1px solid $primary;
+      margin-right: 30px;
+    }
+    &__text{
+        font-size: 1.6rem;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__text p{
+        @include respond(tab-land){
+            overflow: hidden;
+           }
+    }
+
+}
+
+/*--SECTION SERVICE--*/
+
+
+.section-services{
+    background: $section-1;
+}
+
+.service-box{
+    width:70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+  
+   
+}
+.single-service{
+   flex-basis: 48%;
+   text-align: center;
+   border-radius: 7px;
+   margin-bottom: 2rem;
+   color:$white;
+  
+   position:relative;
+
+@include respond(tab-port){
+    flex-basis: 100%;
+}
+@include respond(phone){
+    flex-basis: 100%;
+   }
+
+   &__img{
+        width:100%;
+        border-radius: 7px;
+   }
+   
+   &__overlay{
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0;
+            border-radius: 7px;
+            cursor: pointer;
+            background: linear-gradient(rgba(0,0,0,0.5),$primary);
+            transition:1s; 
+            opacity: 0;
+
+            @include respond(tab-port){
+                opacity: 1;
+               }
+    }
+
+    &__overlay:hover{
+            width:100%;
+            height:100%;
+            position:absolute;
+            top:0;
+            border-radius: 7px;
+            cursor: pointer;
+            background: linear-gradient(rgba(0,0,0,0.5),$primary);
+            transition:1s; 
+
+            opacity: 1;
+    }       
+
+   &__desc{
+       width:80%;
+       position: absolute;
+       bottom: 0%;
+       left:50%;
+       opacity: 0;
+       transform: translate(-50%);
+       transition: 1s;
+
+       pointer-events: none;
+
+       @include respond(tab-port){
+        opacity: 1;
+        bottom: 20%;
+       }
+
+
+       &--hr{
+           background: $white;
+           height: 2px;
+           border: 0;
+           margin:15px auto;
+           width:60%;
+       }
+       &--para{
+           font-size: 1.4rem;
+           color:$white;
+           text-align: center;
+
+           @include respond(tab-land){
+            font-size: 1.2rem;
+           }
+       }
+       &--h3{
+            color:$white;
+            font-size: 2rem;
+            text-align: center;
+
+            @include respond(tab-land){
+                font-size: 1.8rem;
+               }
+       }
+   }
+}
+.single-service:hover .single-service__desc{
+    bottom: 40%;
+    opacity: 1;
+
+    @include respond(tab-land){
+        bottom: 25%;
+    }
+}
+
+/*--SECTION TESTIMONIAL--*/
+
+.testemonial-col {
+    padding:10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px $secondary-1;
+
+    transition: transform .5s;
+}
+.testemonial-user{
+    margin:20px 0;
+
+    &__img{
+        width:40px;
+        margin-right:20px;
+        border-radius: 3px;
+        float: left;
+    }
+    &__info h4{
+        font-size: 1.8rem;
+    }
+    &__info .fab{
+        margin-left: 10px;
+        color:$twitter;
+        font-size: 2rem;
+    }
+    &__info small{
+        color:$primary;
+        font-size: 1.2rem;
+    }
+}
+.testemonial-col:hover{
+    transform: translateY(-7px);
+}
+.testemonial-col p{
+    font-size: 1.4rem;
+}
+
+/*--SECTION FOOTER--*/
+
+.section-footer{
+    background: $section-1;
+}

@@ -1,0 +1,111 @@
+/*--SECTION FOOTER--*/
+
+.section-footer{
+    position: relative;
+
+    &__img{
+        max-width: 200px;
+        opacity: 0.1;
+        position: absolute;
+        left:50%;
+        top:35%;
+        transform: translate(-50%,-60%);
+
+        @include respond(tab-port){
+            top:20%;
+           }
+    }
+}
+
+.footer{
+    padding:100px 0 20px;
+    background: $section-1;
+    padding:10px;
+    margin-bottom: 20px;
+
+    &__heading{
+        margin: 10px 0;
+        font-size: 2rem;
+        font-weight: 900;
+        clear:left;
+
+        &--1{
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &--1::after{
+            display: block;
+            height: 1px;
+            background-color: $primary;
+            content: " ";
+            width: 260px;
+            margin: 10px auto 0px;
+        }
+
+        &--2{
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        &--2::after{
+            display: block;
+            height: 1px;
+            background-color: $primary;
+            content: " ";
+            width: 190px;
+            margin: 10px auto 0px;
+            
+        }
+    }
+    &__para{
+        line-height: 25px;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    &__para i.far, &__para i.fas{
+        font-size: 14px;
+        color: $primary;
+        margin:10px;
+    }
+}
+.footer-social{
+    text-align: center;
+
+    &__para{
+        font-size: 1.6rem;
+        margin-top: 30px;
+
+        @include respond(phone){
+            font-size: 1.2rem;
+           }
+    }
+    &__para a{
+        text-decoration: none;
+        color:$primary;
+    }
+    &__para a:hover{
+        text-decoration: none;
+        color:$primary;
+        text-decoration: underline;
+    }
+}
+.footer-social .fab{
+    height:40px;
+    width:40px;
+    font-size: 2rem;
+    line-height: 40px;
+    border: 1px solid $primary;
+    margin: 40px 5px 0;
+    color: $primary;
+    cursor: pointer;
+    transition: .5s;
+}
+.footer-social .fab:hover{
+    background:$primary;
+    color:$white;
+    transform: translatey(-7px);
+}
+

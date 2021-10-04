@@ -1,0 +1,16 @@
+{
+  "name": "barber",
+  "version": "1.0.0",
+  "description": "WEb stranica za frizerski salon",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "author": "Tihomir Kajgana",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.13"
+  }
+}

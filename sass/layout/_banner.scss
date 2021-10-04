@@ -1,0 +1,50 @@
+.banner{
+    background: linear-gradient(rgba(0,0,0,.5),$primary), url(../css/img/banner.jpg);
+    background-size:cover;
+    background-position: center;
+    height:100vh;
+
+    @include respond(tab-land){
+        height:60vh;
+    }
+    @include respond(tab-port){
+        height:40vh;
+       }
+
+    &__logo{
+        width: 140px;
+        position:absolute;
+        top: 4%;
+        left:10%;
+    }
+    &__text{
+        text-align: center;
+        color: $white;
+        padding-top: 180px;
+
+        @include respond(tab-land){
+            padding-top: 100px;
+           }
+
+        &--h1{
+           font-size: 13rem;
+           font-family: 'Kaushan Script', cursive;
+
+           @include respond(tab-land){
+            font-size: 8rem;
+           }
+           @include respond(tab-port){
+            font-size: 6rem;
+        }  
+        }
+
+        &--para{
+            font-size: 2rem;
+            font-style: italic;
+        }
+    }
+
+    .banner-btn{
+        margin: 70px auto 0;
+    }
+}
